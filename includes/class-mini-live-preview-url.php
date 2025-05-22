@@ -75,7 +75,7 @@ class Mini_Live_Preview_Url {
 	 *
 	 * - Mini_Live_Preview_Url_Loader. Orchestrates the hooks of the plugin.
 	 * - Mini_Live_Preview_Url_i18n.   Defines internationalization functionality.
-	 * - Sajjad_Dev_Settings_API.      Provides an interface for interacting with the WordPress Options API.
+	 * - Sajjad_Dev_Settings_API.      Provides an interface for interacting with the WordPress Settings API.
 	 * - Mini_Live_Preview_Url_Admin.  Defines all hooks for the admin area.
 	 * - Mini_Live_Preview_Url_Public. Defines all hooks for the public side of the site.
 	 *
@@ -99,7 +99,7 @@ class Mini_Live_Preview_Url {
 		require_once MINI_LIVE_PREVIEW_URL_PLUGIN_PATH . 'includes/class-mini-live-preview-url-i18n.php';
 
 		/**
-		 * The class responsible for defining an interface for interacting with the WordPress Options API.
+		 * The class responsible for defining an interface for interacting with the WordPress Settings API.
 		 */
 		require_once MINI_LIVE_PREVIEW_URL_PLUGIN_PATH . 'includes/class-sajjad-dev-settings-api.php';
 
