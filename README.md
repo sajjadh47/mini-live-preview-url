@@ -1,5 +1,7 @@
 # Mini Live Preview URL
 
+[![Plugin Banner](https://ps.w.org/mini-live-preview-url/assets/banner-772x250.png)](https://wordpress.org/plugins/mini-live-preview-url/)
+
 **Tags:** preview, live-preview, url-preview, iframe, quickview-url \
 **Tested up to:** 6.8 \
 **Requires PHP:** 8.0
