@@ -11,8 +11,7 @@
 /**
  * The core plugin class.
  *
- * This is used to define internationalization, admin-specific hooks, and
- * public-facing hooks.
+ * This is used to define admin-specific hooks and public-facing hooks.
  *
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
@@ -52,7 +51,7 @@ class Mini_Live_Preview_Url {
 	 * Define the core functionality of the plugin.
 	 *
 	 * Set the plugin name and the plugin version that can be used throughout the plugin.
-	 * Load the dependencies, define the locale, and set the hooks for the admin area and
+	 * Load the dependencies, set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
 	 * @since     2.0.0
@@ -63,7 +62,6 @@ class Mini_Live_Preview_Url {
 		$this->plugin_name = 'mini-live-preview-url';
 
 		$this->load_dependencies();
-		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 	}
@@ -74,7 +72,6 @@ class Mini_Live_Preview_Url {
 	 * Include the following files that make up the plugin:
 	 *
 	 * - Mini_Live_Preview_Url_Loader. Orchestrates the hooks of the plugin.
-	 * - Mini_Live_Preview_Url_i18n.   Defines internationalization functionality.
 	 * - Sajjad_Dev_Settings_API.      Provides an interface for interacting with the WordPress Settings API.
 	 * - Mini_Live_Preview_Url_Admin.  Defines all hooks for the admin area.
 	 * - Mini_Live_Preview_Url_Public. Defines all hooks for the public side of the site.
@@ -93,12 +90,6 @@ class Mini_Live_Preview_Url {
 		require_once MINI_LIVE_PREVIEW_URL_PLUGIN_PATH . 'includes/class-mini-live-preview-url-loader.php';
 
 		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once MINI_LIVE_PREVIEW_URL_PLUGIN_PATH . 'includes/class-mini-live-preview-url-i18n.php';
-
-		/**
 		 * The class responsible for defining an interface for interacting with the WordPress Settings API.
 		 */
 		require_once MINI_LIVE_PREVIEW_URL_PLUGIN_PATH . 'includes/class-sajjad-dev-settings-api.php';
@@ -115,21 +106,6 @@ class Mini_Live_Preview_Url {
 		require_once MINI_LIVE_PREVIEW_URL_PLUGIN_PATH . 'public/class-mini-live-preview-url-public.php';
 
 		$this->loader = new Mini_Live_Preview_Url_Loader();
-	}
-
-	/**
-	 * Define the locale for this plugin for internationalization.
-	 *
-	 * Uses the Mini_Live_Preview_Url_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
-	 *
-	 * @since     2.0.0
-	 * @access    private
-	 */
-	private function set_locale() {
-		$plugin_i18n = new Mini_Live_Preview_Url_i18n();
-
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}
 
 	/**
@@ -173,8 +149,7 @@ class Mini_Live_Preview_Url {
 	}
 
 	/**
-	 * The name of the plugin used to uniquely identify it within the context of
-	 * WordPress and to define internationalization functionality.
+	 * The name of the plugin used to uniquely identify it within the context of WordPress.
 	 *
 	 * @since     2.0.0
 	 * @access    public

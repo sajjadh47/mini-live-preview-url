@@ -177,6 +177,8 @@ jQuery( document ).ready( function( $ )
 	var contentContainer3 = $( 'body .site-content' );
 	
 	var contentContainer4 = $( 'body #site-content' );
+
+	var contentContainer5 = $( 'body .wp-site-blocks' );
 	
 	if ( contentContainer1.length )
 	{
@@ -193,5 +195,9 @@ jQuery( document ).ready( function( $ )
 	else if ( contentContainer4.length )
 	{
 		contentContainer4.find( 'a' ).miniPreview( { prefetch: 'none' } );
+	}
+	else if ( contentContainer5.length )
+	{
+		contentContainer5.find( 'a' ).miniPreview( { prefetch: 'none' } );
 	}
 } );

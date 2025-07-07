@@ -80,11 +80,11 @@ class Mini_Live_Preview_Url_Admin {
 	public function admin_menu() {
 		add_menu_page(
 			__( 'Mini Live Preview URL', 'mini-live-preview-url' ),
-			__( 'Mini Live Preview URL', 'mini-live-preview-url' ),
+			__( 'Live Preview URL', 'mini-live-preview-url' ),
 			'manage_options',
 			'mini-live-preview-url',
 			array( $this, 'menu_page' ),
-			'dashicons-admin-tools'
+			'dashicons-visibility'
 		);
 	}
 
