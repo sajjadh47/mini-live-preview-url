@@ -59,6 +59,9 @@ Just after installing the plugin, go to Settings > Mini Live Preview URL and che
 
 ## Changelog
 
+### 2.0.2
+* Fixed issue: typo giving fatal error
+
 ### 2.0.1
 - Checked for latest wp version 6.8
 
