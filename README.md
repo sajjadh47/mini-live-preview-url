@@ -3,7 +3,7 @@
 [![Plugin Banner](https://ps.w.org/mini-live-preview-url/assets/banner-772x250.png)](https://wordpress.org/plugins/mini-live-preview-url/)
 
 **Tags:** preview, live-preview, url-preview, iframe, quickview-url \
-**Tested up to:** 6.8 \
+**Tested up to:** 6.9 \
 **Requires PHP:** 8.0
 
 Preview Any URL as QuickView Modal when hover over.
@@ -59,8 +59,11 @@ Just after installing the plugin, go to Settings > Mini Live Preview URL and che
 
 ## Changelog
 
+### 2.0.3
+- Compatibility checkup for latest wp version 6.9
+
 ### 2.0.2
-* Fixed issue: typo giving fatal error
+- Fixed issue: typo giving fatal error
 
 ### 2.0.1
 - Checked for latest wp version 6.8
